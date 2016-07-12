@@ -6,8 +6,8 @@ class MessageModel extends BaseModel {
     return {
       username: null,
       text: null,
-      createdAt: null,
-      updatedAt: null
+      createdAt: new Date(),
+      updatedAt: new Date()
     };
   }
 
