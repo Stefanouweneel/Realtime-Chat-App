@@ -12,6 +12,7 @@ class App extends React.Component {
       currentUser: "guest"
     };
   }
+  
   render() {
     return (
       <div>
