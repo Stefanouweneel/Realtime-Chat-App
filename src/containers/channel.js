@@ -1,6 +1,7 @@
 import React from 'react';
 import Message from './message';
 import MessageModel from '../models/MessageModel';
+import ChannelBox from '../components/channel-box'
 
 class Channel extends React.Component {
   constructor() {
@@ -17,16 +18,20 @@ class Channel extends React.Component {
   updateMessages() {
     this.setState({
       messages: this.model.resources
-    });
+    }, this.setScrollTop.bind(this));
+  }
+
+  setScrollTop() {
+    window.scrollTo(0,document.body.scrollHeight);
   }
 
   render() {
     return (
-      <div>
+      <ChannelBox>
         {this.state.messages.map((message) => {
           return <Message key={ message._id } { ...message } />;
         })}
-      </div>
+      </ChannelBox>
     );
   }
 }

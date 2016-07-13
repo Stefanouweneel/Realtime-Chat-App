@@ -1,4 +1,7 @@
 import React from 'react';
+import Fonts from '../styles/Fonts';
+import ColorSet from '../styles/ColorSet';
+import UserHeader from '../components/user-header'
 
 class SetUsername extends React.Component {
 
@@ -20,11 +23,18 @@ class SetUsername extends React.Component {
     )
   }
 
+  resetUser(event) {
+    event.preventDefault();
+    this.props.onChange("guest");
+  }
+
   renderGreeting() {
     return (
-      <div>
-        <p>Hi, { this.props.username } </p>
-      </div>
+      <UserHeader>
+        <p>Hi, { this.props.username }
+        (<a href="#" onClick={ this.resetUser.bind(this) }>not you?</a>)
+        </p>
+      </UserHeader>
     );
   }
 

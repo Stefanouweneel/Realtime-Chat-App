@@ -30,8 +30,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <Header appName="SLAKO" />
+      <div style={{ paddingTop: 100, paddingBottom: 60 }}>
+        <Header appName="SLAKO Codaisseur Realtime Slack Web Chat API" />
         <SetUsername
           username={ this.state.currentUser }
           onChange={ this.setUsername.bind(this) } />

@@ -6,9 +6,8 @@ class Message extends React.Component {
   render() {
     return (
       <div>
-        <p>{ this.props.username }:</p>
-        <p>{ this.props.text }</p>
-        <p><TimeAgo date={ this.props.createdAt } /></p>
+        <p>{ this.props.username }: &nbsp; { this.props.text }</p>
+        <h6><TimeAgo date={ this.props.createdAt } /></h6>
       </div>
     );
   }
