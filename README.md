@@ -1,15 +1,3 @@
-# React Starter
+# Realtime Chat App
 
-## Installation
-
-```bash
-npm install
-npm start
-open http://localhost:3000
-```
-
-
-------------------
-
-Simplified version of [react-transform-boilerplate](https://github.com/gaearon/react-transform-boilerplate) for the
-traineeship program.
+A realtime chat app built at Codaisseur following a guide.
